@@ -1,0 +1,31 @@
+{
+  "modelo_elegido": "Regresión lineal",
+  "criterio": "Menor MAE en conjunto de prueba (20 %, random_state=42)",
+  "comparacion": {
+    "Regresión lineal": {
+      "MAE": 43.34,
+      "RMSE": 57.27,
+      "R2": 0.9825
+    },
+    "Random Forest Regressor": {
+      "MAE": 107.92,
+      "RMSE": 129.11,
+      "R2": 0.911
+    }
+  },
+  "variables": [
+    "precio_cop",
+    "costo_unitario_cop",
+    "inflacion_pct",
+    "temporada",
+    "promocion_cop",
+    "trm_cop_usd",
+    "usa_insumos_importados"
+  ],
+  "variable_derivada": "trm_importado = trm_cop_usd × usa_insumos_importados",
+  "objetivo": "demanda_unidades",
+  "registros_entrenamiento": 240,
+  "registros_prueba": 60,
+  "origen_datos": "Simulado académico",
+  "fecha_entrenamiento": "2026-11-09"
+}
